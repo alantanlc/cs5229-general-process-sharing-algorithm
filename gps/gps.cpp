@@ -15,7 +15,7 @@ gps::~gps()
 
 void gps::run()
 {
-	while (!unarrived_packets.empty() || !arrived_packets.empty())
+	while (!unarrived_packets.empty() /*|| !arrived_packets.empty()*/)
 	{
 		// Assume that vector of packets are already sorted by arrival_time in ascending order
 		// Update current time with the earliest packet arrival time
@@ -33,6 +33,6 @@ void gps::run()
 			{
 				++i;
 			}
-		}
+		}		
 	}
 }
