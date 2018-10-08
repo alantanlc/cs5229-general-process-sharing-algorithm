@@ -2,6 +2,7 @@
 
 #include "packet.h"
 #include <vector>
+#include <limits>
 
 using namespace std;
 

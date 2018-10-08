@@ -1,6 +1,7 @@
 #pragma once
 
 #include <exception>
+#include <string>
 
 using namespace std;
 
@@ -8,10 +9,12 @@ struct packet
 {
 public:
 	packet();
-	packet(double arrival_time,
+	packet(string packet_name,
+		double arrival_time,
 		double packet_size);
 	~packet();
 
+	string name;
 	double arrival_time;
 	double packet_size;
 	double done = 0;
